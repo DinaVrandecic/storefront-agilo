@@ -5,7 +5,7 @@ import BlueShirt from "../pictures/T-Shirt-blue.webp";
 
 export default function Card() {
   return (
-    <div className="flex flex-col items-center bg-lightgray shadow w-fit h-fit m-[10px] hover:bg-gray hover:cursor-pointer">
+    <div className="flex flex-col items-center bg-lightgray shadow w-fit h-fit pb-[20px] m-[10px] hover:bg-gray hover:cursor-pointer">
       <div className="m-[20px]">
         <Image
           src={BlueShirt}
