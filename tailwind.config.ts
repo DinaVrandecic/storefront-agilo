@@ -10,8 +10,10 @@ const config: Config = {
     extend: {
       colors: {
         mauve: "#D1ADFF",
-        violet: "#7C3AEC",
+        violet: "#8F58EE",
         purple: "#A35CFF",
+        gray: "#D6D5D8",
+        lightgray: "#F2F2F2",
       },
     },
   },

@@ -3,7 +3,7 @@ import Hamburger from "./Hamburger";
 
 export default function Header() {
   return (
-    <div className="flex shadow-md shadow-mauve">
+    <div className="flex sticky shadow-md shadow-mauve">
       <Hamburger />
       <div className="flex justify-center items-center grow">
         <svg
