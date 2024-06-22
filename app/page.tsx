@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="">
       <Header />
-      <div className="flex justify-center mt-10">
+      <div className="flex justify-center my-10">
         <section className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {products.map((product) => (
             <Card

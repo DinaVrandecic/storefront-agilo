@@ -14,6 +14,7 @@ const config: Config = {
         purple: "#A35CFF",
         gray: "#D6D5D8",
         lightgray: "#F2F2F2",
+        darkpurple: "#2D033B",
       },
     },
   },
