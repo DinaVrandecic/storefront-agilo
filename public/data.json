@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "category": "Clothes",
     "name": "T-Shirt unisex",
     "price": "30€",
     "description": "A stylish and comfortable T-shirt for both men and women.",
@@ -35,6 +36,7 @@
   },
   {
     "id": 2,
+    "category": "Clothes",
     "name": "Warm Sweatshirt",
     "price": "50€",
     "description": "A warm and cozy sweatshirt perfect for cold winter days.",
@@ -68,6 +70,7 @@
   },
   {
     "id": 3,
+    "category": "Accessories",
     "name": "Mug",
     "price": "10€",
     "description": "A ceramic mug perfect for your favorite beverages.",
@@ -89,6 +92,7 @@
   },
   {
     "id": 4,
+    "category": "Accessories",
     "name": "Water Bottle",
     "price": "15€",
     "description": "A stainless steel water bottle to keep you hydrated.",
@@ -113,6 +117,7 @@
   },
   {
     "id": 5,
+    "category": "Accessories",
     "name": "Cap",
     "price": "20€",
     "description": "A stylish cap to protect you from the sun.",
@@ -140,6 +145,7 @@
   },
   {
     "id": 6,
+    "category": "Bags",
     "name": "Tote Bag",
     "price": "12€",
     "description": "An eco-friendly tote bag for carrying your essentials.",
@@ -166,6 +172,7 @@
   },
   {
     "id": 7,
+    "category": "Bags",
     "name": "Backpack",
     "price": "35€",
     "description": "A durable backpack for everyday use.",
@@ -190,6 +197,7 @@
   },
   {
     "id": 8,
+    "category": "Clothes",
     "name": "Sweater",
     "price": "45€",
     "description": "A comfortable sweater for colder days.",
@@ -214,6 +222,7 @@
   },
   {
     "id": 9,
+    "category": "Clothes",
     "name": "Sweatpants",
     "price": "40€",
     "description": "Comfortable sweatpants for casual wear.",
@@ -239,6 +248,7 @@
   },
   {
     "id": 10,
+    "category": "Clothes",
     "name": "Sleeveless Shirt",
     "price": "25€",
     "description": "A sleeveless shirt for workouts and casual wear.",
