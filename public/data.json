@@ -1,0 +1,264 @@
+[
+  {
+    "id": 1,
+    "name": "T-Shirt unisex",
+    "price": "30€",
+    "description": "A stylish and comfortable T-shirt for both men and women.",
+    "material": "100% Cotton",
+    "variants": [
+      {
+        "color": "Blue",
+        "images": [
+          "/pictures/T-Shirt-blue-1.jpg",
+          "/pictures/T-Shirt-blue-2.webp",
+          "/pictures/T-Shirt-blue-3.jpg"
+        ]
+      },
+      {
+        "color": "Red",
+        "images": [
+          "/pictures/T-Shirt-red-1.webp",
+          "/pictures/T-Shirt-red-2.webp",
+          "/pictures/T-Shirt-red-3.png",
+          "/pictures/T-Shirt-red-4.jpg"
+        ]
+      },
+      {
+        "color": "Black",
+        "images": [
+          "/pictures/T-Shirt-black-1.webp",
+          "/pictures/T-Shirt-black-2.webp",
+          "/pictures/T-Shirt-black-3.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Warm Sweatshirt",
+    "price": "50€",
+    "description": "A warm and cozy sweatshirt perfect for cold winter days.",
+    "material": "80% Cotton, 20% Polyester",
+    "variants": [
+      {
+        "color": "Black",
+        "images": [
+          "/pictures/Sweatshirt-black-1.jpg",
+          "/pictures/Sweatshirt-black-2.jpg",
+          "/pictures/Sweatshirt-black-3.webp"
+        ]
+      },
+      {
+        "color": "Gray",
+        "images": [
+          "/pictures/Sweatshirt-gray-1.webp",
+          "/pictures/Sweatshirt-gray-2.webp",
+          "/pictures/Sweatshirt-gray-3.webp"
+        ]
+      },
+      {
+        "color": "White",
+        "images": [
+          "/pictures/Sweatshirt-white-1.webp",
+          "/pictures/Sweatshirt-white-2.webp",
+          "/pictures/Sweatshirt-white-3.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Mug",
+    "price": "10€",
+    "description": "A ceramic mug perfect for your favorite beverages.",
+    "material": "Ceramic",
+    "variants": [
+      {
+        "color": "White",
+        "images": ["/pictures/Mug-white-1.jpg", "/pictures/Mug-white-2.jpg"]
+      },
+      {
+        "color": "Black",
+        "images": [
+          "/pictures/Mug-black-1.webp",
+          "/pictures/Mug-black-2.webp",
+          "/pictures/Mug-black-3.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Water Bottle",
+    "price": "15€",
+    "description": "A stainless steel water bottle to keep you hydrated.",
+    "material": "Stainless Steel",
+    "variants": [
+      {
+        "color": "Silver",
+        "images": [
+          "/pictures/WaterBottle-silver-1.jpg",
+          "/pictures/WaterBottle-silver-2.jpg"
+        ]
+      },
+      {
+        "color": "Blue",
+        "images": [
+          "/pictures/WaterBottle-blue-1.webp",
+          "/pictures/WaterBottle-blue-2.webp",
+          "/pictures/WaterBottle-blue-3.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Cap",
+    "price": "20€",
+    "description": "A stylish cap to protect you from the sun.",
+    "material": "100% Cotton",
+    "variants": [
+      {
+        "color": "Black",
+        "images": [
+          "/pictures/Cap-black-1.jpg",
+          "/pictures/Cap-black-2.jpg",
+          "/pictures/Cap-black-3.webp",
+          "/pictures/Cap-black-4.jpg",
+          "/pictures/Cap-black-5.jpg"
+        ]
+      },
+      {
+        "color": "Blue",
+        "images": [
+          "/pictures/Cap-blue-1.webp",
+          "/pictures/Cap-blue-2.webp",
+          "/pictures/Cap-blue-3.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Tote Bag",
+    "price": "12€",
+    "description": "An eco-friendly tote bag for carrying your essentials.",
+    "material": "100% Cotton",
+    "variants": [
+      {
+        "color": "Beige",
+        "images": [
+          "/pictures/ToteBag-beige-1.webp",
+          "/pictures/ToteBag-beige-2.webp",
+          "/pictures/ToteBag-beige-3.webp",
+          "/pictures/ToteBag-beige-4.png"
+        ]
+      },
+      {
+        "color": "Black",
+        "images": [
+          "/pictures/ToteBag-black-1.webp",
+          "/pictures/ToteBag-black-2.webp",
+          "/pictures/ToteBag-black-3.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Backpack",
+    "price": "35€",
+    "description": "A durable backpack for everyday use.",
+    "material": "Polyester",
+    "variants": [
+      {
+        "color": "Black",
+        "images": [
+          "/pictures/Backpack-black-1.jpg",
+          "/pictures/Backpack-black-2.webp"
+        ]
+      },
+      {
+        "color": "Gray",
+        "images": [
+          "/pictures/Backpack-gray-1.webp",
+          "/pictures/Backpack-gray-2.webp",
+          "/pictures/Backpack-gray-3.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Sweater",
+    "price": "45€",
+    "description": "A comfortable sweater for colder days.",
+    "material": "100% Wool",
+    "variants": [
+      {
+        "color": "Navy",
+        "images": [
+          "/pictures/Sweater-navy-1.webp",
+          "/pictures/Sweater-navy-2.jpg"
+        ]
+      },
+      {
+        "color": "Gray",
+        "images": [
+          "/pictures/Sweater-gray-1.webp",
+          "/pictures/Sweater-gray-2.webp",
+          "/pictures/Sweater-gray-3.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Sweatpants",
+    "price": "40€",
+    "description": "Comfortable sweatpants for casual wear.",
+    "material": "Cotton Blend",
+    "variants": [
+      {
+        "color": "Black",
+        "images": [
+          "/pictures/Sweatpants-black-1.webp",
+          "/pictures/Sweatpants-black-2.webp",
+          "/pictures/Sweatpants-black-3.webp"
+        ]
+      },
+      {
+        "color": "Gray",
+        "images": [
+          "/pictures/Sweatpants-gray-1.webp",
+          "/pictures/Sweatpants-gray-2.webp",
+          "/pictures/Sweatpants-gray-3.webp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Sleeveless Shirt",
+    "price": "25€",
+    "description": "A sleeveless shirt for workouts and casual wear.",
+    "material": "100% Cotton",
+    "variants": [
+      {
+        "color": "White",
+        "images": [
+          "/pictures/SleevelessShirt-white-1.png",
+          "/pictures/SleevelessShirt-white-2.jpg"
+        ]
+      },
+      {
+        "color": "Black",
+        "images": [
+          "/pictures/SleevelessShirt-black-1.webp",
+          "/pictures/SleevelessShirt-black-2.webp",
+          "/pictures/SleevelessShirt-black-3.webp"
+        ]
+      }
+    ]
+  }
+]
