@@ -16,7 +16,7 @@ export default function Home() {
           <Link href={"/" + category}>{category}</Link>
         </div>
       ))}
-      <div className="flex justify-center text-5xl font-bold text-indigo font-mono mt-10">
+      <div className="flex justify-center text-3xl sm:text-5xl font-bold text-indigo font-mono mt-10">
         All Products
       </div>
       <div className="flex justify-center my-10">

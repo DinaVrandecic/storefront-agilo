@@ -19,8 +19,11 @@ export default function Card({
 }: CardProps) {
   const newName = name.trim().replaceAll(" ", "_");
   return (
-    <div className="flex flex-col items-center bg-white shadow-md shadow-mauve w-fit h-fit pb-[20px] m-[10px] hover:bg-gray hover:cursor-pointer">
-      <Link href={"/" + category + "/" + newName}>
+    <div>
+      <Link
+        href={"/" + category + "/" + newName}
+        className="flex flex-col items-center bg-white shadow-md shadow-mauve w-fit h-fit pb-[20px] m-[10px] hover:bg-gray hover:cursor-pointer"
+      >
         <div className="m-[20px]">
           <Image
             src={image}
