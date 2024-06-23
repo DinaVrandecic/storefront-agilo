@@ -43,6 +43,7 @@ export default function Header() {
           />
         </svg>
       </div>
+      <div className="w-16"></div>
     </div>
   );
 }

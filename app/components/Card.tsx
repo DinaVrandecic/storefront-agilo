@@ -17,7 +17,7 @@ export default function Card({
   image,
 }: CardProps) {
   return (
-    <div className="flex flex-col items-center bg-lightgray shadow w-fit h-fit pb-[20px] m-[10px] hover:bg-gray hover:cursor-pointer">
+    <div className="flex flex-col items-center bg-white shadow-md shadow-mauve w-fit h-fit pb-[20px] m-[10px] hover:bg-gray hover:cursor-pointer">
       <div className="m-[20px]">
         <Image
           src={image}
@@ -27,8 +27,8 @@ export default function Card({
           style={{ width: "300px", height: "300px" }}
         />
       </div>
-      <p className="text-xl font-bold text-black">{name}</p>
-      <p className="text-xl text-black">{price}</p>
+      <p className="text-xl font-bold text-black font-mono">{name}</p>
+      <p className="text-xl text-black font-mono">{price}</p>
     </div>
   );
 }
