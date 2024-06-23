@@ -26,7 +26,7 @@ export default function Home() {
               key={product.id}
               name={product.name}
               price={product.price}
-              description={product.description}
+              category={product.category}
               material={product.material}
               image={product.variants[0].images[0]}
             />

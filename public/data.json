@@ -78,7 +78,7 @@
     "variants": [
       {
         "color": "White",
-        "images": ["/pictures/Mug-white-1.jpg", "/pictures/Mug-white-2.jpg"]
+        "images": ["/pictures/Mug-white-2.jpg", "/pictures/Mug-white-1.jpg"]
       },
       {
         "color": "Black",
