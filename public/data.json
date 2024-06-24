@@ -17,20 +17,11 @@
       },
       {
         "color": "Red",
-        "images": [
-          "/pictures/T-Shirt-red-1.webp",
-          "/pictures/T-Shirt-red-2.webp",
-          "/pictures/T-Shirt-red-3.png",
-          "/pictures/T-Shirt-red-4.jpg"
-        ]
+        "images": ["/pictures/T-Shirt-red-1.webp"]
       },
       {
         "color": "Black",
-        "images": [
-          "/pictures/T-Shirt-black-1.webp",
-          "/pictures/T-Shirt-black-2.webp",
-          "/pictures/T-Shirt-black-3.webp"
-        ]
+        "images": ["/pictures/T-Shirt-black-1.jpg"]
       }
     ]
   },
@@ -52,19 +43,11 @@
       },
       {
         "color": "Gray",
-        "images": [
-          "/pictures/Sweatshirt-gray-1.webp",
-          "/pictures/Sweatshirt-gray-2.webp",
-          "/pictures/Sweatshirt-gray-3.webp"
-        ]
+        "images": ["/pictures/Sweatshirt-gray-1.jpg"]
       },
       {
         "color": "White",
-        "images": [
-          "/pictures/Sweatshirt-white-1.webp",
-          "/pictures/Sweatshirt-white-2.webp",
-          "/pictures/Sweatshirt-white-3.webp"
-        ]
+        "images": ["/pictures/Sweatshirt-white-1.jpg"]
       }
     ]
   },
@@ -82,11 +65,7 @@
       },
       {
         "color": "Black",
-        "images": [
-          "/pictures/Mug-black-1.webp",
-          "/pictures/Mug-black-2.webp",
-          "/pictures/Mug-black-3.webp"
-        ]
+        "images": ["/pictures/Mug-black-1.jpg"]
       }
     ]
   },
@@ -107,11 +86,7 @@
       },
       {
         "color": "Blue",
-        "images": [
-          "/pictures/WaterBottle-blue-1.webp",
-          "/pictures/WaterBottle-blue-2.webp",
-          "/pictures/WaterBottle-blue-3.webp"
-        ]
+        "images": ["/pictures/WaterBottle-blue-1.webp"]
       }
     ]
   },
@@ -135,11 +110,7 @@
       },
       {
         "color": "Blue",
-        "images": [
-          "/pictures/Cap-blue-1.webp",
-          "/pictures/Cap-blue-2.webp",
-          "/pictures/Cap-blue-3.webp"
-        ]
+        "images": ["/pictures/Cap-blue-1.jpg"]
       }
     ]
   },
@@ -162,11 +133,7 @@
       },
       {
         "color": "Black",
-        "images": [
-          "/pictures/ToteBag-black-1.webp",
-          "/pictures/ToteBag-black-2.webp",
-          "/pictures/ToteBag-black-3.webp"
-        ]
+        "images": ["/pictures/ToteBag-black-1.webp"]
       }
     ]
   },
@@ -187,11 +154,7 @@
       },
       {
         "color": "Gray",
-        "images": [
-          "/pictures/Backpack-gray-1.webp",
-          "/pictures/Backpack-gray-2.webp",
-          "/pictures/Backpack-gray-3.webp"
-        ]
+        "images": ["/pictures/Backpack-gray-1.jpg"]
       }
     ]
   },
@@ -212,11 +175,7 @@
       },
       {
         "color": "Gray",
-        "images": [
-          "/pictures/Sweater-gray-1.webp",
-          "/pictures/Sweater-gray-2.webp",
-          "/pictures/Sweater-gray-3.webp"
-        ]
+        "images": ["/pictures/Sweater-gray-1.jpg"]
       }
     ]
   },
@@ -238,11 +197,7 @@
       },
       {
         "color": "Gray",
-        "images": [
-          "/pictures/Sweatpants-gray-1.webp",
-          "/pictures/Sweatpants-gray-2.webp",
-          "/pictures/Sweatpants-gray-3.webp"
-        ]
+        "images": ["/pictures/Sweatpants-gray-1.jpg"]
       }
     ]
   },
@@ -263,11 +218,7 @@
       },
       {
         "color": "Black",
-        "images": [
-          "/pictures/SleevelessShirt-black-1.webp",
-          "/pictures/SleevelessShirt-black-2.webp",
-          "/pictures/SleevelessShirt-black-3.webp"
-        ]
+        "images": ["/pictures/SleevelessShirt-black-1.jpg"]
       }
     ]
   }

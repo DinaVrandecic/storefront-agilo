@@ -29,10 +29,20 @@ export default function DetailsPage({
   variants,
 }: DetailsPageProps) {
   const [counter, setCounter] = useState(1);
+  const [selectedColor, setSelectedColor] = useState<string>("");
+  const [displayedImage, setDisplayedImage] = useState<string>(image);
+
+  const handleColorChange = (color: string) => {
+    setSelectedColor(color);
+    const selectedVariant = variants.find((variant) => variant.color === color);
+    if (selectedVariant && selectedVariant.images.length > 0) {
+      setDisplayedImage(selectedVariant.images[0]);
+    }
+  };
   return (
     <div className="sm:flex justify-center my-10 mx-5">
       <div className="sm:pr-20">
-        <Image src={image} alt={name} width={400} height={400} />
+        <Image src={displayedImage} alt={name} width={400} height={400} />
       </div>
       <div>
         <p className="text-2xl sm:text-3xl font-bold text-indigo font-mono mt-10">
@@ -56,6 +66,7 @@ export default function DetailsPage({
           id="1"
           className="mt-10 p-2 outline outline-1 outline-gray text-sm w-full font-mono text-black"
           defaultValue=""
+          onChange={(e) => handleColorChange(e.target.value)}
         >
           <option value="" disabled className="text-gray">
             Select color
