@@ -47,7 +47,7 @@ export default function DetailsPage({
           alt={name}
           width={500}
           height={500}
-          style={{ objectFit: "contain", height: "500px" }}
+          style={{ objectFit: "contain", width: "370px" }}
         />
       </div>
       <div className="flex items-center justify-center">

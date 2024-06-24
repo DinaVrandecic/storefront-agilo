@@ -49,20 +49,20 @@ export default function Sidebar() {
       ></div>
 
       <div
-        className={`fixed left-0 w-full sm:w-64 h-full pt-5 bg-white shadow-md transform transition-transform duration-700 delay-150 z-50 ${
+        className={`fixed left-0 w-full sm:w-64 h-full pt-5  bg-white shadow-md transform transition-transform duration-700 delay-150 z-50 ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="text-xl  text-black font-mono">
-          {uniqueCategories.map((category) => (
+        {uniqueCategories.map((category) => (
+          <Link href={"/" + category}>
             <div
               key={category}
-              className="cursor-pointer p-2 hover:bg-lightgray"
+              className="text-xl  text-black font-mono cursor-pointer p-3 hover:bg-lightgray active:bg-darkgray active:text-white"
             >
-              <Link href={"/" + category}>{category}</Link>
+              {category}
             </div>
-          ))}
-        </div>
+          </Link>
+        ))}
       </div>
     </div>
   );
