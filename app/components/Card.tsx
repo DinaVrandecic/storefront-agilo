@@ -30,7 +30,7 @@ export default function Card({
             alt={name}
             width={300}
             height={300}
-            style={{ width: "300px", height: "300px" }}
+            style={{ objectFit: "contain", height: "400px" }}
           />
         </div>
         <p className="text-xl font-bold text-black font-mono">{name}</p>
