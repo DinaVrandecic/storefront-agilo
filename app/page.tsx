@@ -11,11 +11,6 @@ export default function Home() {
   return (
     <main className="">
       <Header />
-      {uniqueCategories.map((category) => (
-        <div key={category} className="cursor-pointer">
-          <Link href={"/" + category}>{category}</Link>
-        </div>
-      ))}
       <div className="flex justify-center text-3xl sm:text-5xl font-bold text-indigo font-mono mt-10">
         All Products
       </div>

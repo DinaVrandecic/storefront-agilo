@@ -1,10 +1,10 @@
 import React from "react";
-import Hamburger from "./Hamburger";
+import Sidebar from "./Sidebar";
 
 export default function Header() {
   return (
     <div className="flex sticky top-0 bg-white shadow-md shadow-mauve">
-      <Hamburger />
+      <Sidebar />
       <div className="flex justify-center items-center grow">
         <svg
           width="85"

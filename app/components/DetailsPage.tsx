@@ -54,7 +54,7 @@ export default function DetailsPage({
         <select
           name="Select color"
           id="1"
-          className="mt-10 p-2 outline outline-1 outline-gray text-sm w-full font-mono"
+          className="mt-10 p-2 outline outline-1 outline-gray text-sm w-full font-mono text-black"
           defaultValue=""
         >
           <option value="" disabled className="text-gray">
@@ -75,7 +75,7 @@ export default function DetailsPage({
         <select
           name="Select size"
           id="1"
-          className="mt-5 p-2 outline outline-1 outline-gray text-sm w-full font-mono"
+          className="mt-5 p-2 outline outline-1 outline-gray text-sm w-full font-mono text-black"
           defaultValue=""
         >
           <option value="" disabled className="text-gray">
