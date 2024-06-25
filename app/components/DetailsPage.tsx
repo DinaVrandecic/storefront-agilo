@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useCart } from "./CartContext";
+import RightSidebar from "./RightSidebar";
 
 interface Variant {
   color: string;
@@ -29,6 +31,7 @@ export default function DetailsPage({
   variants,
 }: DetailsPageProps) {
   const [counter, setCounter] = useState(1);
+  const [selectedSize, setSelectedSize] = useState<string>("");
   const [selectedColor, setSelectedColor] = useState<string>(
     variants[0]?.color || ""
   );
@@ -36,6 +39,7 @@ export default function DetailsPage({
     variants[0]?.images[0] || image
   );
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
+  const { addToCart } = useCart();
 
   useEffect(() => {
     if (selectedColor) {
@@ -48,6 +52,10 @@ export default function DetailsPage({
       }
     }
   }, [selectedColor, variants]);
+
+  const handleSizeChange = (size: string) => {
+    setSelectedSize(size);
+  };
 
   const handleColorChange = (color: string) => {
     setSelectedColor(color);
@@ -75,6 +83,27 @@ export default function DetailsPage({
       setCurrentImageIndex(newIndex);
       setDisplayedImage(selectedVariant.images[newIndex]);
     }
+  };
+
+  const handleAddToCart = () => {
+    addToCart({
+      name,
+      price,
+      image: displayedImage,
+      quantity: counter,
+      color: selectedColor,
+      size: selectedSize,
+    });
+    toast.success(`${counter} ${name} added to cart!`, {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
   };
 
   const selectedVariant = variants.find(
@@ -187,13 +216,14 @@ export default function DetailsPage({
             id="1"
             className="mt-5 p-2 outline outline-1 outline-gray text-sm w-full font-mono text-black"
             defaultValue=""
+            onChange={(e) => handleSizeChange(e.target.value)}
           >
             <option value="" disabled className="text-gray">
               Select size
             </option>
-            <option value="small">S</option>
-            <option value="medium">M</option>
-            <option value="large">L</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
           </select>
           <div className="flex justify-between mt-5 outline outline-1 outline-gray py-1">
             <button
@@ -208,19 +238,8 @@ export default function DetailsPage({
             </button>
           </div>
           <button
-            className="w-full bg-indigo text-white mt-5 py-1 font-mono"
-            onClick={() =>
-              toast.success(`${counter} ${name} added to cart!`, {
-                position: "top-center",
-                autoClose: 3000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "colored",
-              })
-            }
+            className="w-full bg-indigo text-white mt-5 py-1 font-mono hover:bg-violet"
+            onClick={handleAddToCart}
           >
             ADD TO CART
           </button>

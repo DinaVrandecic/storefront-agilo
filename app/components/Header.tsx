@@ -1,6 +1,7 @@
 import React from "react";
 import Sidebar from "./Sidebar";
 import Link from "next/link";
+import RightSidebar from "./RightSidebar";
 
 export default function Header() {
   return (
@@ -46,7 +47,7 @@ export default function Header() {
           </svg>
         </Link>
       </div>
-      <div className="w-16"></div>
+      <RightSidebar></RightSidebar>
     </div>
   );
 }
