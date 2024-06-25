@@ -22,7 +22,7 @@ export default function Card({
     <div>
       <Link
         href={"/" + category + "/" + newName}
-        className="flex flex-col items-center bg-white shadow-md shadow-mauve w-fit h-fit pb-[20px] m-[10px] hover:bg-gray hover:cursor-pointer"
+        className="flex flex-col items-center bg-white shadow-md shadow-mauve w-fit h-fit pb-5 m-5 rounded transition-transform duration-300 ease-in hover:scale-105 hover:z-10 hover:cursor-pointer"
       >
         <div className="m-[20px]">
           <Image
@@ -30,7 +30,7 @@ export default function Card({
             alt={name}
             width={300}
             height={300}
-            style={{ objectFit: "contain", height: "400px" }}
+            style={{ objectFit: "contain", height: "300px" }}
           />
         </div>
         <p className="text-xl font-bold text-black font-mono">{name}</p>

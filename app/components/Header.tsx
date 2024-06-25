@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <div className="flex sticky top-0 bg-white shadow-md shadow-mauve">
+    <div className="flex sticky top-0 z-10 bg-white shadow-md shadow-mauve">
       <Sidebar />
       <div className="flex justify-center items-center grow">
         <Link href={"/"}>

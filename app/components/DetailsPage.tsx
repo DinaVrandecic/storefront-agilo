@@ -1,8 +1,6 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
 
 interface Variant {
   color: string;
@@ -29,26 +27,111 @@ export default function DetailsPage({
   variants,
 }: DetailsPageProps) {
   const [counter, setCounter] = useState(1);
-  const [selectedColor, setSelectedColor] = useState<string>("");
-  const [displayedImage, setDisplayedImage] = useState<string>(image);
+  const [selectedColor, setSelectedColor] = useState<string>(
+    variants[0]?.color || ""
+  );
+  const [displayedImage, setDisplayedImage] = useState<string>(
+    variants[0]?.images[0] || image
+  );
+  const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
+
+  useEffect(() => {
+    if (selectedColor) {
+      const selectedVariant = variants.find(
+        (variant) => variant.color === selectedColor
+      );
+      if (selectedVariant && selectedVariant.images.length > 0) {
+        setDisplayedImage(selectedVariant.images[0]);
+        setCurrentImageIndex(0);
+      }
+    }
+  }, [selectedColor, variants]);
 
   const handleColorChange = (color: string) => {
     setSelectedColor(color);
-    const selectedVariant = variants.find((variant) => variant.color === color);
-    if (selectedVariant && selectedVariant.images.length > 0) {
-      setDisplayedImage(selectedVariant.images[0]);
+  };
+
+  const handlePreviousImage = () => {
+    const selectedVariant = variants.find(
+      (variant) => variant.color === selectedColor
+    );
+    if (selectedVariant) {
+      const newIndex =
+        (currentImageIndex - 1 + selectedVariant.images.length) %
+        selectedVariant.images.length;
+      setCurrentImageIndex(newIndex);
+      setDisplayedImage(selectedVariant.images[newIndex]);
     }
   };
+
+  const handleNextImage = () => {
+    const selectedVariant = variants.find(
+      (variant) => variant.color === selectedColor
+    );
+    if (selectedVariant) {
+      const newIndex = (currentImageIndex + 1) % selectedVariant.images.length;
+      setCurrentImageIndex(newIndex);
+      setDisplayedImage(selectedVariant.images[newIndex]);
+    }
+  };
+
+  const selectedVariant = variants.find(
+    (variant) => variant.color === selectedColor
+  );
+  const hasMultipleImages = selectedVariant
+    ? selectedVariant.images.length > 1
+    : false;
+
   return (
     <div className="sm:flex justify-center my-10 mx-5 sm:my-[68px]">
-      <div className="flex justify-center sm:pr-20">
-        <Image
-          src={displayedImage}
-          alt={name}
-          width={500}
-          height={500}
-          style={{ objectFit: "contain", width: "370px" }}
-        />
+      <div className="flex flex-col justify-center sm:pr-20">
+        <div className="relative group">
+          {hasMultipleImages && (
+            <>
+              <button
+                onClick={handlePreviousImage}
+                className="absolute left-1 top-1/2 transform -translate-y-1/2 bg-gray bg-opacity-50 p-2 rounded-full text-black transition-transform duration-200 ease-in hover:scale-125 hover:z-10 hover:cursor-pointer opacity-0 group-hover:opacity-100"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="black"
+                  className="h-6 w-6"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </button>
+              <button
+                onClick={handleNextImage}
+                className="absolute right-1 top-1/2 transform -translate-y-1/2 bg-gray bg-opacity-50 p-2 rounded-full text-black opacity-0 group-hover:opacity-100 transition-transform duration-200 ease-in hover:scale-125 hover:z-10 hover:cursor-pointer"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="black"
+                  className="h-6 w-6"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </button>
+            </>
+          )}
+          <Image
+            src={displayedImage}
+            alt={name}
+            width={500}
+            height={500}
+            style={{ objectFit: "contain", width: "370px" }}
+          />
+        </div>
       </div>
       <div className="flex items-center justify-center">
         <div>
@@ -66,9 +149,6 @@ export default function DetailsPage({
           </p>
           <p className="text-sm sm:text-md text-coolgray font-mono">
             {material}
-          </p>
-          <p className="text-sm sm:text-md font-bold text-black font-mono mt-3">
-            Colors:
           </p>
           <select
             name="Select color"
