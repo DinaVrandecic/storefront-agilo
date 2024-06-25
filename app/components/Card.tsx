@@ -22,7 +22,7 @@ export default function Card({
     <div>
       <Link
         href={"/" + category + "/" + newName}
-        className="flex flex-col items-center bg-white shadow-md shadow-mauve w-fit h-fit pb-5 m-5 rounded transition-transform duration-300 ease-in hover:scale-105 hover:z-10 hover:cursor-pointer"
+        className="flex flex-col items-center bg-white shadow-md shadow-mauve hover:shadow-xl hover:shadow-mauve w-fit h-fit pb-5 m-5 rounded transition-transform duration-200 ease-in hover:scale-105 hover:z-10 hover:cursor-pointer"
       >
         <div className="m-[20px]">
           <Image
