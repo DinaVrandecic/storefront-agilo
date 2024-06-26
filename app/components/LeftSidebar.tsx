@@ -4,7 +4,7 @@ import Card from "./Card";
 import products from "../../public/data.json";
 import Link from "next/link";
 
-export default function Sidebar() {
+export default function LeftSidebar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const uniqueCategories = Array.from(
@@ -13,7 +13,7 @@ export default function Sidebar() {
 
   return (
     <div>
-      <div className="my-2">
+      <div className="my-2 mx-2">
         <button
           className="p-5 w-10 h-10 relative focus:outline-none bg-white"
           onClick={() => setIsOpen(!isOpen)}
@@ -54,7 +54,7 @@ export default function Sidebar() {
         }`}
       >
         {uniqueCategories.map((category) => (
-          <Link href={"/" + category}>
+          <Link href={"/" + category} key={category}>
             <div
               key={category}
               className="text-xl  text-black font-mono cursor-pointer p-3 hover:bg-lightgray active:bg-darkgray active:text-white"

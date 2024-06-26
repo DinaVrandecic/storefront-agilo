@@ -20,6 +20,7 @@ export default function CartCard({
   size,
 }: CartCardProps) {
   const { removeFromCart } = useCart();
+  const newPrice = parseFloat(price) * quantity;
 
   const handleRemove = () => {
     removeFromCart(name, color, size);
@@ -36,7 +37,9 @@ export default function CartCard({
       />
       <div className="ml-2 grow">
         <div className="flex justify-between">
-          <p className="text-black font-bold font-mono text-xl py-1">{price}</p>
+          <p className="text-black font-bold font-mono text-xl py-1">
+            {newPrice}€
+          </p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"

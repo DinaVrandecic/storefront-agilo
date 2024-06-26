@@ -18,6 +18,7 @@ const config: Config = {
         coolgray: "#958EA4",
         indigo: "#400F95",
         beige: "#D1ADFF",
+        green: "#03C988",
       },
     },
   },

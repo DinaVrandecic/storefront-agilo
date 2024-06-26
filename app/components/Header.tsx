@@ -1,12 +1,12 @@
 import React from "react";
-import Sidebar from "./Sidebar";
+import LeftSidebar from "./LeftSidebar";
 import Link from "next/link";
 import RightSidebar from "./RightSidebar";
 
 export default function Header() {
   return (
     <div className="flex sticky top-0 z-10 bg-white shadow-md shadow-mauve">
-      <Sidebar />
+      <LeftSidebar />
       <div className="flex justify-center items-center grow">
         <Link href={"/"}>
           <svg

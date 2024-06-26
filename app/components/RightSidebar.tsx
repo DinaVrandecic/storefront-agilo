@@ -7,9 +7,14 @@ export default function RightSidebar() {
   const [isOpen, setIsOpen] = useState(false);
   const { cart } = useCart();
 
+  const subtotal = cart.reduce((total, item) => {
+    const itemTotal = parseFloat(item.price) * item.quantity;
+    return total + itemTotal;
+  }, 0);
+
   return (
     <div>
-      <div className="my-2 relative">
+      <div className="my-2 mx-2 relative">
         <button
           className="p-5 w-10 h-10 focus:outline-none flex justify-center items-center"
           onClick={() => setIsOpen(!isOpen)}
@@ -44,6 +49,22 @@ export default function RightSidebar() {
           {cart.map((item) => (
             <CartCard key={item.name} {...item} />
           ))}
+          <div className="mx-2 my-4">
+            <div className="flex justify-between font-mono text-black">
+              <p className="font-mono text-black">Subtotal:</p>
+              <p className="font-bold font-mono text-black">{subtotal}€</p>
+            </div>
+            <div className="flex justify-between  ">
+              <p className="font-mono text-black">Shipping:</p>
+              <p className="font-mono text-green">FREE</p>
+            </div>
+            <div className="flex justify-between pt-2 ">
+              <p className="font-bold font-mono text-black text-xl">Total:</p>
+              <p className="font-bold font-mono text-black text-xl">
+                {subtotal}€
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
