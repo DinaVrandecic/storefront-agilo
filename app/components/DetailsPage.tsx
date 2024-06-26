@@ -86,6 +86,34 @@ export default function DetailsPage({
   };
 
   const handleAddToCart = () => {
+    if (!selectedColor) {
+      toast.error("Please select a color", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+      return;
+    }
+
+    if (!selectedSize) {
+      toast.error("Please select a size.", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+      return;
+    }
+
     addToCart({
       name,
       price,
@@ -195,9 +223,6 @@ export default function DetailsPage({
             defaultValue=""
             onChange={(e) => handleColorChange(e.target.value)}
           >
-            <option value="" disabled className="text-gray">
-              Select color
-            </option>
             {variants.map((variant) => (
               <option
                 style={{
@@ -254,7 +279,11 @@ export default function DetailsPage({
             draggable
             pauseOnHover
             theme="colored"
-            toastStyle={{ backgroundColor: "#8F58EE" }}
+            toastStyle={
+              selectedSize
+                ? { backgroundColor: "#8F58EE" }
+                : { backgroundColor: "white" }
+            }
           />
         </div>
       </div>

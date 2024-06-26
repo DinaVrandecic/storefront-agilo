@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useCart } from "./CartContext";
 import CartCard from "./CartCard";
 
@@ -9,9 +9,9 @@ export default function RightSidebar() {
 
   return (
     <div>
-      <div className="my-2">
+      <div className="my-2 relative">
         <button
-          className="p-5 w-10 h-10  focus:outline-none flex justify-center items-center"
+          className="p-5 w-10 h-10 focus:outline-none flex justify-center items-center"
           onClick={() => setIsOpen(!isOpen)}
         >
           <div>
@@ -35,11 +35,12 @@ export default function RightSidebar() {
       ></div>
 
       <div
-        className={`fixed right-0 w-full sm:w-96 h-full  bg-white shadow-md transform transition-transform duration-700 delay-150 z-50 ${
+        className={`fixed right-0 w-full sm:w-96 h-full bg-white shadow-md transform transition-transform duration-700 delay-150 z-50 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
+        style={{ maxHeight: "calc(100vh - 56px)" }}
       >
-        <div className="border-t border-mauve">
+        <div className="border-t border-mauve h-full overflow-y-auto">
           {cart.map((item) => (
             <CartCard key={item.name} {...item} />
           ))}

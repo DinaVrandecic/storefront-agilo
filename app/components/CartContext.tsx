@@ -14,6 +14,7 @@ interface CartItem {
 interface CartContextProps {
   cart: CartItem[];
   addToCart: (item: CartItem) => void;
+  removeFromCart: (name: string, color: string, size: string) => void;
 }
 
 const CartContext = createContext<CartContextProps | undefined>(undefined);
@@ -23,25 +24,37 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
 
   const addToCart = (newItem: CartItem) => {
     setCart((prevCart) => {
-      const existingItemIndex = prevCart.findIndex(
+      const existingItem = prevCart.find(
         (item) =>
           item.name === newItem.name &&
           item.color === newItem.color &&
           item.size === newItem.size
       );
-
-      if (existingItemIndex !== -1) {
-        const updatedCart = [...prevCart];
-        updatedCart[existingItemIndex].quantity += newItem.quantity;
-        return updatedCart;
+      if (existingItem) {
+        return prevCart.map((item) =>
+          item.name === newItem.name &&
+          item.color === newItem.color &&
+          item.size === newItem.size
+            ? { ...item, quantity: item.quantity + newItem.quantity }
+            : item
+        );
       } else {
         return [...prevCart, newItem];
       }
     });
   };
 
+  const removeFromCart = (name: string, color: string, size: string) => {
+    setCart((prevCart) =>
+      prevCart.filter(
+        (item) =>
+          !(item.name === name && item.color === color && item.size === size)
+      )
+    );
+  };
+
   return (
-    <CartContext.Provider value={{ cart, addToCart }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
       {children}
     </CartContext.Provider>
   );
