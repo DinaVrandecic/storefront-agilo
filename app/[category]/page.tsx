@@ -4,7 +4,13 @@ import Card from "../components/Card";
 import products from "../../public/data.json";
 import Link from "next/link";
 
+import { notFound } from "next/navigation";
+
 export default function Category({ params }: { params: { category: string } }) {
+  if (!products.some((product) => product.category === params.category)) {
+    return notFound();
+  }
+
   return (
     <div>
       <Header />

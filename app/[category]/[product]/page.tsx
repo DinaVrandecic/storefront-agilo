@@ -12,8 +12,14 @@ interface pageProps {
   };
 }
 
+import { notFound } from "next/navigation";
+
 export default function Product({ params }: pageProps) {
   const newName = params.product.trim().replaceAll("_", " ");
+  if (!products.some((product) => product.name === newName)) {
+    return notFound();
+  }
+
   return (
     <div>
       <Header />
