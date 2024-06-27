@@ -9,7 +9,7 @@ Setting up the images based on the selected color was quite challenging. I had t
 ## The implementation I am most proud of
 Creating the cart functionality was initially time-consuming due to the need for setting up a context for managing the cart state. In my previous project, I aimed to develop a similar cart system but lacked the time to implement all the desired features. This time, however, I am thrilled to have finally learned the process of building a comprehensive and functional shopping cart.
 ## Project structure
-![structure](./structure.png)
+![structure](./structure.jpeg)
 ## Considerations
 1.	State Management: Implemented a centralized state management system using React Context to handle cart operations efficiently.
 2.	Data: Given the limited amount of data, I decided to organize it into a JSON file for simplicity and efficiency.
