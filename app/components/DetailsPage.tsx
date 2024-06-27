@@ -253,12 +253,15 @@ export default function DetailsPage({
           <div className="flex justify-between mt-5 outline outline-1 outline-gray py-1">
             <button
               onClick={() => (counter > 1 ? setCounter(counter - 1) : counter)}
-              className="px-3"
+              className="px-3 text-black"
             >
               -
             </button>
-            <div>{counter}</div>
-            <button onClick={() => setCounter(counter + 1)} className="px-3">
+            <div className="text-black">{counter}</div>
+            <button
+              onClick={() => setCounter(counter + 1)}
+              className="px-3 text-black"
+            >
               +
             </button>
           </div>

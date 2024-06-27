@@ -54,7 +54,7 @@ export default function CartCard({
             />
           </svg>
         </div>
-        <p className=" font-mono text-lg">{name}</p>
+        <p className="text-black font-mono text-lg">{name}</p>
         <div className="flex justify-start">
           <p className="text-darkgray font-mono pr-4">{size}</p>
           <p className="text-darkgray font-mono pr-4">{color}</p>

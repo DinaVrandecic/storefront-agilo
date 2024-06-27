@@ -15,25 +15,25 @@ export default function LeftSidebar() {
     <div>
       <div className="my-2 mx-2">
         <button
-          className="p-5 w-10 h-10 relative focus:outline-none bg-white"
+          className="p-5 w-10 h-10 relative focus:outline-none bg-white "
           onClick={() => setIsOpen(!isOpen)}
         >
           <div className="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <span
               aria-hidden="true"
-              className={`block absolute bg-current transform transition duration-500 ease-in-out w-6 h-0.5 bg-black rounded-sm ${
+              className={`block absolute transform transition duration-500 ease-in-out w-6 h-0.5 bg-black rounded-sm ${
                 isOpen ? "rotate-45" : "-translate-y-1.5"
               }`}
             ></span>
             <span
               aria-hidden="true"
-              className={`block absolute bg-current transform transition duration-500 ease-in-out w-6 h-0.5 bg-black rounded-sm ${
+              className={`block absolute transform transition duration-500 ease-in-out w-6 h-0.5 bg-black rounded-sm ${
                 isOpen ? "opacity-0" : ""
               }`}
             ></span>
             <span
               aria-hidden="true"
-              className={`block absolute bg-current transform transition duration-500 ease-in-out w-6 h-0.5 bg-black rounded-sm ${
+              className={`block absolute transform transition duration-500 ease-in-out w-6 h-0.5 bg-black rounded-sm ${
                 isOpen ? "-rotate-45" : "translate-y-1.5"
               }`}
             ></span>
