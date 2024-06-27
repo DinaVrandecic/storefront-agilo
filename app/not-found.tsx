@@ -25,8 +25,8 @@ export default function NotFound() {
             Uh-oh, something's missing!
           </p>
           <p className="text-center text-xl text-mono text-black">
-            The page you're trying to reach is not available. Maybe it's taking
-            a coffee break?
+            The page you&apos;re trying to reach is not available. Maybe it's
+            taking a coffee break?
           </p>
           <Link href={"/"}>
             <button className=" bg-indigo text-white mt-5 py-1 font-mono hover:bg-violet p-3">
