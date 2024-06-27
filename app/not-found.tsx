@@ -22,11 +22,11 @@ export default function NotFound() {
         <div className="flex justify-center flex-col items-center">
           <p className="text-9xl text-mono text-mauve">404</p>
           <p className="text-2xl text-mono text-bold text-indigo">
-            Uh-oh, something's missing!
+            Uh-oh, something&apos;s missing!
           </p>
           <p className="text-center text-xl text-mono text-black">
-            The page you&apos;re trying to reach is not available. Maybe it's
-            taking a coffee break?
+            The page you&apos;re trying to reach is not available. Maybe
+            it&apos;s taking a coffee break?
           </p>
           <Link href={"/"}>
             <button className=" bg-indigo text-white mt-5 py-1 font-mono hover:bg-violet p-3">
