@@ -22,8 +22,8 @@ export default function EmptyCart() {
             Whoops! Nothing here yet.
           </p>
           <p className="text-center text-xl text-mono text-black">
-            Don't worry, our products are just a click away. Start adding items
-            to your cart now!
+            Don&apos;t worry, our products are just a click away. Start adding
+            items to your cart now!
           </p>
           <Link href={"/"}>
             <button className=" bg-indigo text-white mt-5 py-1 font-mono hover:bg-violet p-3">
