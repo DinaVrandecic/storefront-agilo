@@ -61,27 +61,6 @@ export default function DetailsPage({
     setSelectedColor(color);
   };
 
-  const handleImage = (action: string) => {
-    const selectedVariant = variants.find(
-      (variant) => variant.color === selectedColor
-    );
-    let newIndex = 0;
-    if (selectedVariant) {
-      switch (action) {
-        case "next":
-          newIndex = (currentImageIndex + 1) % selectedVariant.images.length;
-          break;
-        case "previous":
-          newIndex =
-            (currentImageIndex - 1 + selectedVariant.images.length) %
-            selectedVariant.images.length;
-          break;
-      }
-      setCurrentImageIndex(newIndex);
-      setDisplayedImage(selectedVariant.images[newIndex]);
-    }
-  };
-
   const handleAddToCart = () => {
     if (!selectedColor) {
       toast.error("Please select a color", {
